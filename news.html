@@ -1,0 +1,261 @@
+<!-- ***************************************************************************************
+  Author     : Adam Torres
+  Course     : WEB-1
+  URL        : ocelot.aul.fiu.edu/~atorr208
+  Professor  : Michael Robinson 
+  Program #1 : Make a Simple Website
+               The purpose of this program was to make a simple website.
+
+
+  Due Date   : 09/06/2016 
+  Certification: 
+  I hereby certify that this work is my own and none of it is the work of any other person. 
+
+  Adam Torres
+
+**************************************************************************************** -->
+
+<html>
+	<head>
+		<title>Torres, Adam, Page 2</title>
+		
+		<style type="text/css">
+			table {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.nav {
+				background-color: black;
+				color: white;
+				font-size: 30;
+							
+			}
+			.nav a {
+				color: white;
+				text-decoration: none;
+			}
+			.nav a:hover{
+				color: yellow;
+			}
+			.nav a:visited {
+				color: white;
+			}
+			#title {
+				text-align: center;
+			}
+			#content {
+				background-color: lightgrey;
+			}
+			p {
+				font-size: 26;
+				font-family: "Times New Roman", "Arial";
+				line-height: 40px;
+				padding: 20px;
+			}
+			
+			ol {
+				font-size: 26;
+				font-family: "Times New Roman", "Arial";
+			}
+			img {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+		</style>
+		
+	</head>
+	
+	<body style="background-color: lightgreen">
+		<table id="title" border=5 bordercolor="blue" style="background-color: yellow;">
+			<tr>
+				<td>
+					<font size="6" face="Arial">Adam Torres</font>
+					<br>
+					<font size="4" face="Verdana">FIU IT Major</font>
+				</td>
+			</tr>
+
+		</table>
+		
+		<table class="nav" id="title">
+			<tr>
+				<td>
+					<a href="index.html">
+						Home
+					</a>
+				</td>
+				<td>
+					<a href="news.html">
+						News
+					</a>
+				</td>
+				<td>
+					<a href="projects.html">
+						My Projects
+					</a>
+				</td>
+				<td>
+					<a href="contact.html">
+						Contact Me
+					</a>
+				</td>
+				<td>
+					<a href="pgm2.php">
+						Program 2
+					</a>
+				</td>
+			</tr>
+		</table>
+		
+		<table id=content>
+			<tr>
+				<td>
+					<img src="images/news.jpg" width="50%">
+				</td>
+			</tr>
+			<tr>
+				<td id=title>
+					<br>
+					<br>
+					<font size=12 face="Helvetica">September 4, 2016: AI Algorithm</font>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<img src="images/AI.jpg">
+					<p>
+						In my time programming, I've had to write many algorithms of varying complexity.
+						However, while working on "A Pirate's Life," I came across one of the most challenging
+						obstacles I've yet faced. Making a challenging, yet not impossible to beat enemy AI. 
+					</p>
+					<p>
+						I think I've come close. It's not perfect, but it's near fully functional, and is the best
+						solution I've come up with out of the many I've tried so far.
+						<br><br>
+						The algorithm in pseudocode is the following running in a loop:
+					</p>
+					
+					<ol type="1">
+						<li>
+							Assign an enemy to a ship
+						</li>
+						
+						<li>
+							If (Distance to enemy > Cannon Range): 
+							<br>
+								<ul>
+									<li>
+										Chase
+									</li>
+								</ul>
+							Else: 
+							<br>
+								<ul>
+									<li>
+										Attack
+									</li>
+								</ul>
+						</li>
+					</ol>
+					
+					<ol type="A">
+						<li>
+							Chase
+							
+							<ol type="1">
+								<li>
+									Calculate the angle to the target. (The picture to the left describes what I mean).
+								</li>
+								<li>
+									If (angle to target < 10):
+									<ul>
+										<li>
+											Turn Right
+										</li>
+									</ul>
+									Else:
+									<ul>
+										<li>
+											Turn Left
+										</li>
+									</ul>
+									
+								</li>
+								
+							</ol>
+						</li>
+						
+						<li>
+							Attack
+							
+							<ul>
+								<li>
+									If (distance to target < Cannon Range/2 ):
+										<ul>
+											<li>
+												Line up cannons 
+											</li>
+											
+											<ul>
+												<li>
+													The reason cannon range is divided by two, is because the ship must turn to face the enemy.
+													So if the ship turned as soon as cannons were in range, by the time it lined up, the enemy would
+													be out of range again.
+												</li>
+											</ul>
+																															
+										</ul>
+			
+								</li>
+								<li>
+									Else:
+								</li>
+								<ul>
+									<li>
+										Return to chasing
+									</li>
+								</ul>
+							</ul>
+						</li>
+						
+						<li>
+							Lining up the Cannons
+						</li>
+						<ul>
+							<li>
+								If (angle to target < 90 Degrees):
+							</li>
+							<ul>
+								<li>
+									Turn Right
+								</li>
+							</ul>
+							<li>
+								Else If (angle to target >= 90 Degrees):
+							</li>
+							<ul>
+								<li>
+									Turn Left
+								</li>
+							</ul>
+							<li>
+								If (angle to target > 85 Degrees OR angle to target < 95 Degrees) (e.g. the target is between 85 and 95 degrees)
+							</li>
+							<ul>
+								<li>
+									If (target is on left): Shoot left <br>
+									If (target is on right): Shoot right, same for forward and back. <br>
+									Which side the enemy is on is determined by a complex algorithm that I will go over in another post.
+								</li>
+							</ul>
+					</ol>
+					
+				</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>
